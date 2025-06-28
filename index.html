@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع إسلامي بسيط</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        .page-container {
+            width: 100%;
+            max-width: 800px;
+            padding: 1.5rem;
+            background-color: #ffffff; /* White background for content */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 1rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .hidden {
+            display: none;
+        }
+        .page-title {
+            font-size: 2.5rem; /* Larger text for titles */
+            font-weight: 700;
+            color: #2c3e50; /* Darker blue-gray for text */
+            margin-bottom: 1.5rem;
+        }
+        .dua-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #34495e;
+            text-align: justify;
+            direction: rtl; /* Right-to-left for Arabic text */
+            margin-bottom: 1.5rem;
+            max-height: 70vh; /* Limit height for scrollable content */
+            overflow-y: auto; /* Enable scrolling for long text */
+            padding-right: 10px; /* Padding for scrollbar */
+            scrollbar-width: thin; /* Firefox */
+            scrollbar-color: #a0aec0 #edf2f7; /* Firefox */
+        }
+        .dua-text::-webkit-scrollbar {
+            width: 8px; /* Webkit browsers */
+        }
+        .dua-text::-webkit-scrollbar-track {
+            background: #edf2f7; /* Webkit browsers */
+            border-radius: 10px;
+        }
+        .dua-text::-webkit-scrollbar-thumb {
+            background-color: #a0aec0; /* Webkit browsers */
+            border-radius: 10px;
+            border: 2px solid #ffffff;
+        }
+        .dua-paragraph {
+            margin-bottom: 1rem;
+        }
+        .nav-button {
+            background-color: #3498db; /* Blue button */
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 1.5rem;
+        }
+        .nav-button:hover {
+            background-color: #2980b9; /* Darker blue on hover */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 640px) {
+            .page-title {
+                font-size: 2rem;
+            }
+            .dua-text {
+                font-size: 1rem;
+            }
+            .nav-button {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+            .page-container {
+                padding: 1rem;
+                margin: 1rem; /* Add margin for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="page1" class="page-container">
+        <h1 class="page-title">السلام عليكم</h1>
+        <button class="nav-button" onclick="showPage('page2')">عرض دعاء مناجاة التائبين</button>
+    </div>
+
+    <div id="page2" class="page-container hidden">
+        <h1 class="page-title">دعاء مناجاة التائبين</h1>
+        <div class="dua-text">
+            <p class="dua-paragraph">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+            <p class="dua-paragraph">إلهِي أَلْبَسَتْنِي الْخَطايا ثَوْبَ مَذَلَّتِي، وَجَلَّلَنِي التَّباعُدُ مِنْكَ لِباسَ مَسْكَنَتِي، وَأَماتَ قَلْبِي عَظِيمُ جِنايَتِي، فَأَحْيِه بِتَوْبَةٍ مِنْكَ يا أَمَلِي وَبُغْيَتِي، وَيا سُؤْلِي وَمُنْيَتِي.</p>
+            <p class="dua-paragraph">فَوَعِزَّتِكَ ما أَجِدُ لِذُنُوبِي سِواكَ غافِراً، وَلا أَرى لِكَسْرِي غَيْرَكَ جابِراً، وَقَدْ خَضَعْتُ بِالإِنابَةِ إلَيْكَ وَعَنَوْتُ بِالاسْتِكانَةِ لَدَيْكَ.</p>
+            <p class="dua-paragraph">فَإنْ طَرَدْتَنِي مِنْ بابِكَ فَبِمَنْ أَلُوذُ؟ وَإنْ رَدَدْتَنِي عَنْ جَنابِكَ فَبِمَنْ أَعُوذُ؟ فَوَا أَسَفاهُ مِنْ خَجْلَتِي وَافْتِضاحِي، وَوا لَهْفاهُ مِنْ سُوءِ عَمَلِي وَاجْتِراحِي.</p>
+            <p class="dua-paragraph">أَسْأَلُكَ يا غافِرَ الذَّنْبِ الْكَبِيرِ وَيا جابِرَ الْعَظْمِ الْكَسِيرِ، أَنْ تَهَبَ لِي مُوبِقاتِ الْجَرائِرِ، وَتَسْتُرَ عَلَيَّ فاضِحاتِ السَّرائِرِ، وَلا تُخْلِنِي فِي مَشْهَدِ الْقِيامَةِ مِنْ بَرْدِ عَفْوِكَ وَغَفْرِكَ، وَلا تُعْرِنِي مِنْ جَمِيلِ صَفْحِكَ وَسَتْرِكَ.</p>
+            <p class="dua-paragraph">إلهِي ظَلِّلْ عَلَىٰ ذُنُوبِي غَمامَ رَحْمَتِكَ، وَأَرْسِلْ عَلَىٰ عُيُوبِي سَحابَ رَأْفَتِكَ. إلهِي هَلْ يَرْجِعُ الْعَبْدُ الْآبِقُ إِلَّا إِلَىٰ مَوْلاهُ؟ أَمْ هَلْ يُجِيرُهُ مِنْ سَخَطِهِ أَحَدٌ سِواهُ؟</p>
+            <p class="dua-paragraph">إلهِي إِنْ كانَ النَّدَمُ عَلَىٰ الذَّنْبِ تَوْبَةٌ فَإنِّي وَعِزَّتِكَ مِنْ النَّادِمِينَ! وَإِنْ كانَ الاسْتِغْفارُ مِنْ الْخَطِيئَةِ حِطَّةً فَإنِّي لَكَ مِنْ الْمُسْتَغْفِرِينَ! لَكَ الْعُتْبَىٰ حَتَّىٰ تَرْضَىٰ.</p>
+            <p class="dua-paragraph">إلهِي بِقُدْرَتِكَ عَلَيَّ تُبْ عَلَيَّ، وَبِحِلْمِكَ عَنِّي اعْفُ عَنِّي، وَبِعِلْمِكَ بِي ارْفَقْ بِي.</p>
+            <p class="dua-paragraph">إلهِي أَنْتَ الَّذِي فَتَحْتَ لِعِبادِكَ بابَاً إِلَىٰ عَفْوِكَ سَمَّيْتَهُ التَّوْبَةَ، فَقُلْتَ تُوبُوا إِلَىٰ اللهِ تَوْبَةً نَصُوحاً، فَمَا عُذْرُ مَنْ أَغْفَلَ دُخُولَ الْبابِ بَعْدَ فَتْحِهِ؟</p>
+            <p class="dua-paragraph">إلهِي إِنْ كانَ قَبُحَ الذَّنْبُ مِنْ عَبْدِكَ فَلْيَحْسُنْ الْعَفْوُ مِنْ عِنْدِكَ. إلهِي ما أَنا بِأَوَّلِ مَنْ عَصاكَ فَتُبْتَ عَلَيْهِ، وَتَعَرَّضَ لِمَعْرُوفِكَ فَجُدْتَ عَلَيْهِ.</p>
+            <p class="dua-paragraph">يا مُجِيبَ الْمُضْطَرِّ يا كاشِفَ الضُّرِّ، يا عَظِيمَ الْبِرِّ يا عَلِيماً بِمَا فِي السِّرِّ، يا جَمِيلَ السِّتْرِ، اسْتَشْفَعْتُ بِجُودِكَ وَكَرمِكَ إِلَيْكَ، وَتَوَسَّلْتُ بِجَنابِكَ وَتَرَحُّمِكَ لَدَيْكَ، فَاسْتَجِبْ دُعائِي وَلا تُخَيِّبْ فِيكَ رَجائِي، وَتَقَبَّلْ تَوْبَتِي وَكَفِّرْ خَطِيئَتِي، بِمَنِّكَ وَرَحْمَتِكَ يا أَرْحَمَ الرَّاحِمِينَ.</p>
+        </div>
+        <button class="nav-button" onclick="showPage('page1')">العودة للصفحة الرئيسية</button>
+    </div>
+
+    <script>
+        // دالة لعرض الصفحة المطلوبة وإخفاء الأخرى
+        function showPage(pageId) {
+            const page1 = document.getElementById('page1');
+            const page2 = document.getElementById('page2');
+
+            if (pageId === 'page1') {
+                page1.classList.remove('hidden');
+                page2.classList.add('hidden');
+            } else {
+                page1.classList.add('hidden');
+                page2.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
