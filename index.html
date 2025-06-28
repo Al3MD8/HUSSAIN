@@ -43,7 +43,6 @@
   <div class="min-h-screen flex items-center justify-center px-4 py-10">
     <div class="w-full max-w-3xl bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 shadow-lg rounded-2xl p-6 md:p-10 text-center">
       
-      <!-- زر التبديل بين الليل والنهار -->
       <div class="flex justify-end mb-4">
         <button onclick="toggleTheme()" class="text-sm font-semibold bg-blue-500 hover:bg-blue-600 text-white py-1 px-4 rounded transition">
           تبديل الوضع
@@ -69,8 +68,24 @@
   </div>
 
   <script>
+    // On page load, set the theme based on local storage or system preference
+    document.addEventListener('DOMContentLoaded', () => {
+      const storedTheme = localStorage.getItem('theme');
+      if (storedTheme) {
+        document.body.classList.add(storedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+      }
+    });
+
     function toggleTheme() {
-      document.body.classList.toggle('dark');
+      if (document.body.classList.contains('dark')) {
+        document.body.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.body.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
     }
   </script>
 </body>
